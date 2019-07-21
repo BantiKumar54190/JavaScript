@@ -6,6 +6,7 @@ function market(sabji, dal, bhat)
 };
 
 var k = new market("brinjal","moong","arva");
+
 console.log(k.dal);
 market.prototype.aam="mango";
 console.log(k.aam);

@@ -1,3 +1,4 @@
+
 var circle = {
     radius : 10
 };
@@ -16,6 +17,7 @@ circle.perimeter = function()
 
 var circle1 = Object.create(circle);
 circle1.radius=20;
+console.log(circle)
 console.log(circle.area());
 console.log(circle.radius);
 console.log(circle.perimeter()) ;
@@ -23,3 +25,6 @@ console.log(circle.perimeter()) ;
 console.log(circle1.area());
 console.log(circle1.radius);
 console.log(circle1.perimeter()) ;
+console.log(circle1)
+
+
