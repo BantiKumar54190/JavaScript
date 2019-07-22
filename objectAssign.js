@@ -1,7 +1,7 @@
 var engine = {
 
     gear: function() {
-        return 'gear'
+        return 'gear';
     },
     drive: function() {
         return 'driver'
