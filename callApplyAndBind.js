@@ -1,13 +1,13 @@
-var obj = { num:2};
-var obj1 = function(a,b,c) {
-   return this.num + a + b +c;
-}
+var person = { firstname:'Banti' , lastname : 'kumar'}
+fullname = function (a,b) {
+  return  this.firstname + " " + this.lastname + " "+ "ages =" +" "+ (a + b)  ;
+} 
+console.log(fullname.call(person,5,6));
+console.log(fullname.apply(person,[5,6]));
+var newPerson=fullname.bind(person);
+console.log(newPerson(5,6))
 
-console.log(obj1.call(obj,1,2,3))
-var array = [1,2,3]
-console.log(obj1.apply(obj,array))
 
-var obj2 = obj1.bind(obj);
-console.log(obj2(1,2,3))
+
 
 
