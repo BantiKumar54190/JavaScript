@@ -4,7 +4,7 @@ var obj = {
     fullname: function()
     {
         return this.name ,this.age; 
-}
+    }
 };
 
 for (var item in obj) {

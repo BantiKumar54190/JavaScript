@@ -4,6 +4,7 @@ var person =
     mname: "kumar",
     lname: "singh"
 };
+console.log(person.fname)
 var txt = "";
 for( var item in person )
 {

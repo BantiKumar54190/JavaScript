@@ -16,5 +16,4 @@ function name() {
     color ="white";
     console.log(name + " " +age +" " +color)
 }
-
 name()

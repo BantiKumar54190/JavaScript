@@ -5,7 +5,7 @@ var cat = {
    }
 };
 
-cat.name = "anamika" ;
+cat.name = "Anamika" ;
 
 (cat.atSound());
 var cat1 = Object.create(cat)
