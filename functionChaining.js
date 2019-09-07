@@ -1,4 +1,5 @@
 const obj = function(i) {
+    debugger;
     this.i = i;
     this.add = function(i) {
         this.i += i;
