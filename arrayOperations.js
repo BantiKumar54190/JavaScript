@@ -1,9 +1,9 @@
 "use strict"
 
 //sorting using arrow functions
-/*debugger;
+//debugger;
 
-var objs = [
+/*var objs = [
     { age:44, name:'vinay' },
     { age:24, name:'deepak' },
     { age:74, name:'suresh' }
@@ -23,7 +23,7 @@ copyObj.sort((a, b) => b.age - a.age);
 
 for(var item in copyObj) {
     console.log(copyObj[item]); 
-}*/
+}
 
 //sorting using functions
 var objs = [
@@ -36,7 +36,7 @@ var objs = [
 var copyObj = [...objs];
 
 //sort in ascending order using unnamed function
-/*copyObj.sort(function(a, b) { 
+copyObj.sort(function(a, b) { 
         return a.age - b.age;
 });
 for(var item in copyObj) {
@@ -51,7 +51,7 @@ copyObj.sort(function (a, b){
 
 for(var item in copyObj) {
     console.log(copyObj[item]); 
-}*/
+}
 
 //sorting in ascending order using named function 
 copyObj.sort(function ascendingSort(a, b) {
@@ -67,4 +67,19 @@ copyObj.sort(function descendingSort(a, b){
 })
 for(var item in copyObj){
     console.log(copyObj[item]);
-}
+}*/
+
+//1
+var a = [1, 2, 3, 4, 5];
+console.log(a.slice(0, 3));
+
+//2
+console.log(a.shift());
+console.log(a.pop());
+
+//3
+var a = [1, 2, 3, 4, 5];
+a.splice(2, 1, 3.14);
+console.log(a);
+
+
