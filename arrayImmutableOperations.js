@@ -92,7 +92,7 @@ const projectedArticles = articles.map(x => x.article)
 
 const chooseDates = articles.map(x => ({ newDate: x.dateAdded }));
 console.log(chooseDates);
-*/
+
 
 const names = ["Banti", "Banti", "Gandu", "Kundan", "Linga", "Bakuda", "Gire", "Mishra", "Kunal", "Motua", "Tamannah", "Tamannah", "Muttu", "Kudupalli", "Kudupalli", "Kundan", "Suraj singh"];
 
@@ -129,3 +129,60 @@ console.log(onlySuraj);
 
 const stringLengthGreaterThanEight =  names.filter(x => x.length > 8); 
 console.log(stringLengthGreaterThanEight);
+
+
+//Array.prototype.find()
+const arr1 = [1, 2, 3, 4, 5]
+const found = arr1.find(x => x > 2);
+console.log(found);
+console.log(arr1.indexOf(!found)); 
+
+
+const inventory = [
+  [{name: 'apples', quantity: 2}],
+  [{name: 'bananas', quantity: 0}],
+  [{name: 'cherries', quantity: 5}]
+];
+
+const findbananas = inventory.find(x => x === 'bananas');
+console.log(findbananas);
+
+const filteredArray = inventory.filter(x => x.some(y => y.name === 'bananas'));
+console.log(filteredArray);
+
+
+
+const even = arr1.some(x => x % 2 === 0);
+console.log(even);
+
+function isBiggerThanTen(element, index, arr1) {
+  return element > 10;
+}
+
+console.log(arr1.some(isBiggerThanTen));
+
+const fruits2 = ['Apple', 'banana', 'Amrud', 'Anar' ]
+
+function checkAvailability(arr, arrval) {
+  return arr.some(x => x===arrval )
+}
+
+console.log(checkAvailability(fruits2, 'kela'));
+console.log(checkAvailability(fruits2, 'banana'));
+
+
+const truthy_values = [true, 'true', 1];
+function getBoolean(value) {
+  if(typeof value === 'string' ) {
+      //value = value.toLowerCase.trim();
+  }
+  return truthy_values.some(t => t===value);
+}
+
+console.log(getBoolean(false));
+console.log(getBoolean(true));
+console.log(getBoolean(1));
+console.log(getBoolean('true'))
+ 
+const resultOfEvery = arr1.every( x => x % 1 ===0)  
+console.log(resultOfEvery);
