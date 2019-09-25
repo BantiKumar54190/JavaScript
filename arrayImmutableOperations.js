@@ -184,5 +184,108 @@ console.log(getBoolean(true));
 console.log(getBoolean(1));
 console.log(getBoolean('true'))
  
-const resultOfEvery = arr1.every( x => x % 1 ===0)  
+const resultOfEvery = arr1.every(x => x % 1 === 0);
 console.log(resultOfEvery);
+
+const nums = [2, 3, 5, 7, 11, 13];
+
+const moduleObj = (function() {
+  function isPrime(x, i, arr) {
+    for (let i = 2; i < Math.floor(Math.sqrt(x)); i++) {
+      if (x % i === 0) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  return {
+    isPrime
+  };
+}());
+ 
+const areAllPrime = nums.every(moduleObj.isPrime);
+
+console.log(areAllPrime);
+
+
+const number = [1, 2, 3, 4, 5]
+const flatArray = number.map( x => [x * 2]);
+console.log(flatArray);
+
+const stringArray = ["hi this is Mr Banti kumar's property", 'India'] 
+const flatmapString = stringArray.flatMap( x => x.split(" "));
+console.log(flatmapString);
+const mapString = stringArray.map(x => x.split(" "));
+console.log(mapString);
+
+const indexOfArray = number.indexOf(3);
+console.log(indexOfArray);
+
+const groupOfLetter = ['a', 'b', 'c', 'd', 'e', 'a']; 
+const element = 'a';
+const indexOfLetter = groupOfLetter.indexOf(element);
+console.log(indexOfLetter);
+
+const storeLetters = [];
+let index, i = 0;
+while ((index = groupOfLetter.indexOf(element, i++)) !== -1) {
+    if (storeLetters.indexOf(index) !== -1) {
+      break;
+    }
+
+    storeLetters.push(index);
+}
+
+console.log(storeLetters);
+
+
+
+let array1 = [5, 3, 7, 1];
+let array2 = [2, 4, 6];
+Array.prototype.push.apply(array1, array2);
+console.log(array1);
+
+const min = Math.min.apply(Math, array1);
+const max = Math.max.apply(Math, array1);
+console.log(min, max);
+
+const indices = [];
+const givenArray = ['a', 'b', 'c', 'd', 'w', 'a' ];
+
+let idx = givenArray.indexOf(element);
+while(idx !== -1) {
+  indices.push(idx);
+  idx = givenArray.indexOf(element , idx + 1);
+}
+console.log(indices);
+
+function counter() {
+  this.count = 0;
+  this.sum = 0;
+} 
+
+counter.prototype.add = function(array) {
+  array.forEach(function(entry) {
+    this.sum += entry;
+    ++this.count;
+  }, this);
+}
+
+const obj1 = new counter();
+obj1.add([1, 2, 3]);
+console.log(obj1.sum);
+console.log(obj1.count);
+
+const details = [{name: "banti", age: 26}, {name: "kunal", age: 25}, {name: 'bakuda', age:23}, {name: "kunal", age: 17}];
+
+// {name: "kunal", age: 25}.name = 'Kunal'
+const onlyName = details.find(x => x.name === 'kunal').name || '';
+console.log(onlyName);
+
+
+const arrayOfElements = [1, 3, 4, 5];
+
+console.log(arrayOfElements.findIndex(x => x === 1 ));
+console.log(arrayOfElements.findIndex(x => x % 2 === 0));
