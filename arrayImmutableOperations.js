@@ -285,6 +285,8 @@ const onlyName = details.find(x => x.name === 'kunal').name || '';
 console.log(onlyName);
 
 
+
+//find index is same as filter[0] in javascript
 const arrayOfElements = [1, 3, 4, 5];
 
 console.log(arrayOfElements.findIndex(x => x === 1 ));
