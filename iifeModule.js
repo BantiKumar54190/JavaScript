@@ -3,7 +3,7 @@
 // Wrapping in IIFE ensures we don't pollute the global namespace and enforces abstraction
 var x = (function() {
     debugger;
-    var name ='banti';
+    var name = 'banti';
     var age = 25;
 
     function getDetails() {

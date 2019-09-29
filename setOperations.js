@@ -6,6 +6,6 @@ console.log(set);
 var array = [2, 4];
 set.add(array);
 set.add([2, 3]);
-console.log(set);
-console.log(set.has([2, 3]));
-console.log(array);
+console.log(set);//
+console.log(set.has([2, 3]));//False
+console.log(array);//true
