@@ -9,7 +9,7 @@ console.log(c);
 console.log(obj.a) 
 
 
-var obj = { a:3 }
+var obj = {a:3}
 function pureFunction(a) {
     var b = 1;
     a = a + b;
