@@ -6,7 +6,7 @@
 
 ___
 
-[Tokens](https://regex101.com/r/Ojh6ZI/1/)
+**[Tokens](https://regex101.com/r/Ojh6ZI/1/)**
 
 A token is the smallest unit of a regular expression. It matches everything except line terminators.
 
@@ -16,19 +16,19 @@ A token is the smallest unit of a regular expression. It matches everything exce
 
 ___
 
-[Digits](https://regex101.com/r/BZI5F6/2)
+**[Digits](https://regex101.com/r/BZI5F6/2)**
 
 - Digits can be written as `\d` which will match exactly one digit between 0 to 9.
 - To not match any digit we simply write `\D`.
 ___
 
-[Whitespace](https://regex101.com/r/M5I1dW/2)
+**[Whitespace](https://regex101.com/r/M5I1dW/2)**
 
 - Whitespaces can be matched using `\s` which will match any of these characters `\r\n\t\f\v`.
 - To not match any whitespace we simply write `\S`.
 ___
 
-[Character classes](https://regex101.com/r/9T03L8/1)
+**[Character classes](https://regex101.com/r/9T03L8/1)**
 
 - Character classes give us more flexibility when compared to tokens.
 - Using character classes we can escape certain characters which are ambiguous to the Regex Engine.
@@ -36,7 +36,7 @@ ___
 
 ___
 
-[Anchors](https://regex101.com/r/G7A22u/1)
+**[Anchors](https://regex101.com/r/G7A22u/1)**
 
 - Anchors provide a way to specify a line that starts with certain pattern and ends with certain pattern.
 - `^` signifies the start of the pattern in the line.
@@ -44,14 +44,14 @@ ___
 
 ___
 
-[Negation](https://regex101.com/r/tEWr9H/1)
+**[Negation](https://regex101.com/r/tEWr9H/1)**
 
 - Negation provides a way to negate the pattern and select everything else.
 - `^` (Caret) when used inside of a character class before a token acts as negation of that token.
 - E.g: `[^a+]+`
 ___
 
-[Alternation](https://regex101.com/r/j29kef/1)
+**[Alternation](https://regex101.com/r/j29kef/1)**
 
 - Alternation provides a way to specify a logical **OR** between the pattern specified.
 - Regex alternation can be written as:
@@ -59,7 +59,7 @@ ___
 
 ___
 
-[Quantifiers](https://regex101.com/r/Nd6e2b/1)
+**[Quantifiers](https://regex101.com/r/Nd6e2b/1)**
 
 - Quantifiers allow you to specify a pattern repeating `n` number of times.
 - Quantifiers are suffixed after a pattern.
@@ -76,7 +76,7 @@ ___
 
 ___
 
-[Word Boundaries](https://regex101.com/r/Z7N2Z6/1)
+**[Word Boundaries](https://regex101.com/r/Z7N2Z6/1)**
 
 - There exists scenarios where our pattern is **overlapping** within other substrings often resulting in erroneous matches, to avoid we use word boundaries to demarcate the pattern to avoid any ambiguity.
 
@@ -87,3 +87,39 @@ ___
 Syntax -> `\b<Pattern>\b` (Where <pattern> is our pattern)
 
 - To negate word boundaries and select everyhting else we use the token `\B`.
+
+___
+
+**[Capturing Groups](https://regex101.com/r/XcI7zU/1)**
+
+- To capture some parts of the pattern inside the pattern itself we wrap it inside a parenthesis `()`.
+- When we put quantifiers outside the parenthesis it gets applied to the entire capturing group.
+- These parenthesis create a numbered capturing in order from **left-to-right** starting from 1.
+
+```javascript
+$0 -> Indicates the entire match
+$1 -> Indicates the first capturing group
+$2 -> Indicates the second capturing group
+...
+$n -> Indicates the nth capturing group
+```
+___
+
+**[Backreferences](https://regex101.com/r/sJ3DZR/2)**
+
+- To reference the captured group again inside of the pattern itself we use **backreferences**.
+
+```javascript
+The first captured group in the pattern is accessed like `\1`.
+The second captured group in the pattern is accessed like `\2`.
+and so on.
+```
+
+If there more than 9 capturing groups there is no special syntax in JavaScript to write the backreference, we simply write `\10` to access the 10th capturing group [Example](https://regex101.com/r/WIwUJt/1).
+
+___
+
+**[Non capturing group](https://regex101.com/r/jbuTkO/1)**
+
+- If we put `?:` inside the captured group `()` it doesn't include it in the captured group, but treats it like a regular match.
+- So, it doesn't consume extra space for the individual groups and we can exclude non important characters that we don't want to group.
