@@ -1,7 +1,7 @@
 # Regular Expressions 
 
 > Regular expressions allow you to search patterns within haystacks of text. 
->Different languages have their own Regular expression processing engines.
+> Different languages have their own Regular expression processing engines.
 > So, a regex written in JavaScript may not be exactly equal to the one written in PHP.
 
 ___
@@ -123,3 +123,47 @@ ___
 
 - If we put `?:` inside the captured group `()` it doesn't include it in the captured group, but treats it like a regular match.
 - So, it doesn't consume extra space for the individual groups and we can exclude non important characters that we don't want to group.
+
+___
+
+**Lookarounds** -
+
+**Assertion** of a statement / expression is the establishment of truth or not.
+
+Lookarounds helps us to **assert** whether a pattern is preceded / followed by another pattern. They don't store the match hence no extra space is needed but they assert whether a pattern is preceded / followed by another pattern.
+
+Because they don't store the match they are called **Zero-Length assertions.**
+
+- Lookarounds are of 2 types:
+    1. Lookaheads
+    2. Lookbehinds
+
+- **[Positive lookahead](https://regex101.com/r/d36g2a/1)**
+
+Allows us to assert that expression A where expression B follows.
+
+    ```javascript
+        A(?=B)
+    ```
+- **[Negative lookahead](https://regex101.com/r/uAXFRj/1/)**
+
+Allows us to assert that expression A where expression B does not follow.
+
+    ```javascript
+        A(?!B)
+    ```
+- **[Positive lookbehind](https://regex101.com/r/dctELi/1/)**
+
+Allows us to assert that expression A where expression B precedes.
+
+    ```javascript
+        (?<=B)A
+    ```
+
+- **[Negative lookbehind](https://regex101.com/r/LzZOBt/1/)**
+
+Allows us to assert that expression A where expression B does not precede.
+
+    ```javascript
+        (?<!B)A
+    ```
