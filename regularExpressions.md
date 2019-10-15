@@ -142,28 +142,28 @@ Because they don't store the match they are called **Zero-Length assertions.**
 
 Allows us to assert that expression A where expression B follows.
 
-    ```javascript
-        A(?=B)
-    ```
+```javascript
+    A(?=B)
+```
 - **[Negative lookahead](https://regex101.com/r/uAXFRj/1/)**
 
 Allows us to assert that expression A where expression B does not follow.
 
-    ```javascript
-        A(?!B)
-    ```
+```javascript
+    A(?!B)
+```
 - **[Positive lookbehind](https://regex101.com/r/dctELi/1/)**
 
 Allows us to assert that expression A where expression B precedes.
 
-    ```javascript
-        (?<=B)A
-    ```
+```javascript
+    (?<=B)A
+```
 
 - **[Negative lookbehind](https://regex101.com/r/LzZOBt/1/)**
 
 Allows us to assert that expression A where expression B does not precede.
 
-    ```javascript
-        (?<!B)A
-    ```
+```javascript
+    (?<!B)A
+```
