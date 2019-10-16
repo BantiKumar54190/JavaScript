@@ -167,3 +167,16 @@ Allows us to assert that expression A where expression B does not precede.
 ```javascript
     (?<!B)A
 ```
+___
+
+Flags in Regular Expression in JavaScript -
+
+Flags in regular expressions allow to specify other metadata to help assist with the matching of the pattern.
+
+```
+\s -> Single line [. dot matches newline]
+\m -> Multi line  [^ matches start and $ end of line]
+\g -> Global (Don't exit after matching first occurence)
+\i -> Case insensitive match
+\u -> Unicode match
+```
