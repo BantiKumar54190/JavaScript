@@ -169,7 +169,7 @@ Allows us to assert that expression A where expression B does not precede.
 ```
 ___
 
-Flags in Regular Expression in JavaScript -
+**Flags in Regular Expression** -
 
 Flags in regular expressions allow to specify other metadata to help assist with the matching of the pattern.
 
