@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<books>
+    <book>
+        <title description="HC Verma">Physics by HC Verma</title>
+        <price>100</price>
+    </book>
+    <book>
+        <title description="Mohammed Adil">Chemisty by Mohammed Adil</title>
+        <price>200</price>
+    </book>  
+    <book>
+        <title description="KC Sinha">Math by KC Sinha></title>
+        <price>222</price>
+    </book>   
+</books>
+   
