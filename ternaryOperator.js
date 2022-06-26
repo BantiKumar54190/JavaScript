@@ -12,4 +12,6 @@ var obj = {
 for (var name in obj) {
      var c = (obj.hasOwnProperty(name)==true) ? 6 : 8;
      console.log(c);
+ console.log(c);
 }
+
